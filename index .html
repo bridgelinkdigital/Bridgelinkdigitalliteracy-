@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridgelink Digital Literacy Center</title>
+  <style>
+    /* === Global Styles === */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #0056b3;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #003d80;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* === Hero Section === */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1350&q=80')
+        center/cover no-repeat;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      z-index: 1;
+    }
+
+    .hero p {
+      z-index: 1;
+      font-size: 1.2rem;
+    }
+
+    /* === Sections === */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0056b3;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* === Form Styles === */
+    form {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #004494;
+    }
+
+    footer {
+      background-color: #003d80;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Bridgelink Digital Literacy Center</h1>
+    <p>Empowering Communities Through Digital Skills</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#admission">Admission</a>
+    <a href="#enquiry">Enquiry</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Welcome to Bridgelink Digital Literacy Center</h1>
+    <p>Learn Computer & Smartphone Skills for a Better Future</p>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Bridgelink Digital Literacy Center is dedicated to promoting digital inclusion and empowering individuals in rural
+      and urban areas with practical computer and smartphone skills for education, business, and innovation.
+    </p>
+  </section>
+
+  <!-- Programmes -->
+  <section id="programmes">
+    <h2>Our Programmes</h2>
+    <p><strong>1. Digital Literacy</strong> – Learn essential computer skills including typing, MS Office, and internet use.</p>
+    <p><strong>2. Smartphone Skills</strong> – Learn how to use smartphones for communication, business, and online services.</p>
+  </section>
+
+  <!-- Admission -->
+  <section id="admission">
+    <h2>Apply Online</h2>
+    <form>
+      <label for="name">Student Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select Gender --</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+
+      <label for="tel">Tel No</label>
+      <input type="tel" id="tel" name="tel" placeholder="07XXXXXXXX" required />
+
+      <label for="programme">Programme / Academic</label>
+      <select id="programme" name="programme" required>
+        <option value="">-- Select Programme --</option>
+        <option>Digital Literacy</option>
+        <option>Smartphone Skills</option>
+      </select>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- Enquiry -->
+  <section id="enquiry">
+    <h2>Enquiry Form</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your name" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Type your enquiry..." required></textarea>
+
+      <button type="submit">Send Enquiry</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Bridgelink Digital Literacy Center. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
